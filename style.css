@@ -64,6 +64,7 @@ body {
   font-size: 0.9rem;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  cursor: pointer;
 }
 
 /* HeroSection */
@@ -132,6 +133,7 @@ body {
   border: none;
   color: white;
   padding: 1rem 2rem;
+  cursor: pointer;
 }
 .input > button > img {
   margin-left: 10px;
@@ -277,6 +279,7 @@ body {
 
   font-family: "Roboto", sans-serif;
   color: var(--primary);
+  cursor: pointer;
 }
 
 /* Portfolio Section */
@@ -438,6 +441,7 @@ body {
 .faq-container__box img {
   width: 1.5rem;
   margin: 1rem 1rem;
+  cursor: pointer;
 }
 
 .faq-container__box__heading h3 {
@@ -477,6 +481,7 @@ body {
 
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .connectus {
@@ -497,6 +502,7 @@ body {
   background: transparent;
   color: var(--primary);
   padding: 10px;
+  cursor: pointer;
 }
 
 /* Contact Us Section */
@@ -558,6 +564,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .contactus-container__right {
