@@ -91,140 +91,8 @@ body {
   display: none;
 }
 
-/* Navbar Responsive Code  */
-@media screen and (max-width: 960px) {
-  /* For Responsive Navbar */
-  .mobile-navbar-btn {
-    display: block;
-    z-index: 2;
-    border: 3px solid #101010;
-  }
-  .container {
-    position: relative;
-  }
-  .menu {
-    width: 100%;
-    height: 100vh;
-    background-color: var(--primary);
-    position: absolute;
-    top: 88px;
-    left: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    /* to get the transition */
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in-out;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-  .menu-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    gap: 2rem;
-  }
-
-  /* For Active class of menu */
-
-  .active .menu {
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  .active .mobile-nav-icon:nth-child(1) {
-    display: none;
-  }
-
-  .active .mobile-nav-icon:nth-child(2) {
-    display: block;
-  }
-
-  .input {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .ourtalent {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 8rem !important;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .package-types ul {
-    flex-wrap: wrap;
-    width: 60%;
-  }
-
-  .package-cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  .whatwedo__cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .process-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .faq-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .connectus {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contactus {
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
-  }
-
-  .contactus-container__right {
-    width: 80% !important;
-    margin-left: 0;
-  }
-
-  .contactus-container__left {
-    width: 80% !important;
-  }
-
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .footer-mid {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-}
-
 /* HeroSection */
+
 .heroSection {
   display: flex;
   flex-direction: column;
@@ -362,6 +230,21 @@ body {
   text-align: center;
 }
 
+/* animation for horizontal line below the package type */
+.package-types ul li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  transition: width 0.3s;
+}
+
+.package-types ul li:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
 .package-types ul li a {
   text-decoration: none;
   color: black;
@@ -440,6 +323,10 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--primary);
   cursor: pointer;
+}
+
+.package-card__button button:hover {
+  background-color: #abb9c8;
 }
 
 /* Portfolio Section */
@@ -591,16 +478,27 @@ body {
 .faq-container__box {
   background-color: var(--primary);
   border-radius: 6px;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 40%;
   min-width: 200px;
   margin: 8px;
   padding-left: 12px;
+
+  position: relative;
 }
 
-.faq-container__box img {
+.faq-container__box__heading {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-container__box__heading__button {
   width: 1.5rem;
   margin: 1rem 1rem;
   cursor: pointer;
@@ -609,6 +507,20 @@ body {
 .faq-container__box__heading h3 {
   color: #404040;
   font-size: 12px;
+}
+
+.faqAns {
+  position: relative;
+  display: none;
+  /* height: 0; */
+  /* overflow: hidden; */
+  /* overflow-y: auto; */
+}
+
+.activeFaq .faqAns {
+  display: block;
+  height: auto;
+  transition: 0.5s;
 }
 
 /* Contact Us Section */
@@ -744,6 +656,21 @@ body {
   margin: 1rem 2rem 1rem 2rem;
 }
 
+.contactus-container__right__title h3::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  transition: width 0.3s;
+  margin-top: 1rem;
+}
+
+.contactus-container__right__title h3:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
 .contactus-container__right__details {
   display: flex;
   align-items: center;
@@ -846,4 +773,137 @@ body {
 
 .footer-bottom img {
   width: 16rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 960px) {
+  /* For Responsive Navbar */
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 2;
+    border: 3px solid #101010;
+  }
+  .container {
+    position: relative;
+  }
+  .menu {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary);
+    position: absolute;
+    top: 88px;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* to get the transition */
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  /* For Active class of menu */
+
+  .activeNav .menu {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .activeNav .mobile-nav-icon:nth-child(1) {
+    display: none;
+  }
+
+  .activeNav .mobile-nav-icon:nth-child(2) {
+    display: block;
+  }
+
+  .input {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .ourtalent {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .package-types ul {
+    flex-wrap: wrap;
+    width: 60%;
+  }
+
+  .package-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .whatwedo__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .process-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .faq-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .connectus {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactus {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .contactus-container__right {
+    width: 80% !important;
+    margin-left: 0;
+  }
+
+  .contactus-container__left {
+    width: 80% !important;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-mid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 }
