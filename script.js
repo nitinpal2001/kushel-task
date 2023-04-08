@@ -18,16 +18,15 @@ for (let i = 0; i < accordian.length; i++) {
 }
 
 // For Toggling between Address and Map
+function showAddress() {
+    document.querySelector('.contactus-container__right__Address').style.display = 'block';
+    document.querySelector('.contactus-container__right__map').style.display = 'none';
+}
 
-const addressButton = document.querySelector('.address-btn');
-const mapButton = document.querySelectorAll('.map-btn');
-const addressContainer = document.querySelector('.contactus-container__right__details');
-const mapContainer = document.querySelector('.contactus-container__right__map');
-
-addressButton.addEventListener('click', () => {
-    addressContainer.classList.add('active');
-    mapContainer.classList.remove('active');
-});
+function showMap() {
+    document.querySelector('.contactus-container__right__Address').style.display = 'none';
+    document.querySelector('.contactus-container__right__map').style.display = 'block';
+}
 
 
 

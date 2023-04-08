@@ -11,6 +11,7 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   min-width: fit-content;
   overflow-x: hidden;
 }
@@ -23,10 +24,11 @@ body {
 }
 
 .logo {
-  padding: 12px;
+  padding: 1rem 3rem;
 }
+
 .logo img {
-  width: 12rem;
+  width: 10rem;
 }
 
 .container {
@@ -54,6 +56,7 @@ body {
 
 .menu ul li a {
   text-decoration: none;
+  text-transform: uppercase;
   color: #101010;
   font-size: 12px;
   font-weight: 600;
@@ -126,29 +129,57 @@ body {
 
 .hero-content h1 {
   font-weight: 400;
-  margin-top: 0;
+  margin-bottom: 0.7rem;
+  font-size: 2.45rem;
 }
 
 .blueLine {
-  width: 100px;
-  height: 1px;
+  width: 126px;
+  height: 2px;
   border: none;
   background: var(--secondary);
   /* margin: 1rem 0; */
+}
+
+.blackLine {
+  width: 130px;
+  height: 1.5px;
+  border: none;
+  background: #101010;
 }
 
 .hero-content {
   text-align: center;
 }
 
+.hero-content p {
+  font-size: 1.2rem;
+}
+
 .input {
   display: flex;
+  width: 55%;
+  margin-top: 1rem;
 }
 
 .input > input {
   background-color: var(--primary);
-  padding: 1rem 2rem;
-  margin-right: 10px;
+  padding-left: 0.8rem;
+  margin-right: 1.5rem;
+  color: #101010;
+  line-height: 3rem;
+  width: 40%;
+  border-radius: 2px;
+  border: transparent;
+}
+
+.input > input::placeholder {
+  color: #101010;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #101010;
+
+  opacity: 0.7;
 }
 
 .input > button {
@@ -157,20 +188,31 @@ body {
   background-color: var(--secondary);
   border: none;
   color: white;
-  padding: 1rem 2rem;
+  padding: 1rem 0.5rem;
   cursor: pointer;
+  width: 51%;
+  font-size: 0.65rem;
+  border-radius: 2px;
+  border: transparent;
 }
+
 .input > button > img {
   margin-left: 10px;
+  width: 0.7rem;
 }
 
 /* What we do container */
 .whatwedo {
-  background-color: #d4d6d7;
+  background-color: rgba(212, 214, 215, 0.2);
 }
 
 .whatwedo h1 {
   text-align: center;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 5rem;
+  margin-bottom: 0.6rem;
 }
 
 .whatwedo h1 span {
@@ -180,7 +222,7 @@ body {
 .whatwedo__cards {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   margin: 2rem auto;
   justify-content: center;
 }
@@ -192,7 +234,8 @@ body {
   text-align: center;
   background-color: var(--primary);
   border-radius: 10px;
-  width: 12rem;
+  width: 13rem;
+  height: 15rem;
 }
 
 .card img {
@@ -225,8 +268,8 @@ body {
 
 .package-types ul li {
   list-style: none;
-  width: 30%;
-  padding: 1rem;
+  width: auto;
+  padding: 0.2rem;
   text-align: center;
 }
 
@@ -248,8 +291,12 @@ body {
 .package-types ul li a {
   text-decoration: none;
   color: black;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 500;
+}
+.package-types ul li a:hover {
+  font-weight: 600;
+  transition: all ease-out 0.4s;
 }
 
 .package-cards {
@@ -257,13 +304,13 @@ body {
   /* flex-wrap: wrap; */
   justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 85%;
   margin: 2rem auto;
   padding: 0;
 }
 
 .package-card {
-  width: 32%;
+  width: 20rem;
   min-width: 200px;
   display: flex;
   flex-direction: column;
@@ -279,17 +326,25 @@ body {
   justify-content: flex-start;
 }
 .package-card__heading h2 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin: 10px 10px;
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.14);
 }
 
 .package-card__heading img {
-  width: 12px;
+  width: 1rem;
 }
 
 .package-card__text {
   font-size: 0.8rem;
   text-align: center;
+}
+
+.package-card__text p {
+  color: #404040;
+  line-height: 1.3rem;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .package-card__price {
@@ -302,6 +357,7 @@ body {
 
 .package-card__price > h3 {
   font-size: 1.8rem;
+  margin: 1rem;
 }
 
 .package-card__price > p {
@@ -344,6 +400,22 @@ body {
   align-items: flex-start;
 }
 
+.ourtalent-text__heading {
+  font-size: 1.9rem;
+  color: #404040;
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.14);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.ourtalent-text__heading h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #404040;
+  margin: 1rem 0;
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.14);
+}
+
 .ourtalent-text__heading h1 span {
   color: var(--secondary);
 }
@@ -351,6 +423,13 @@ body {
 .ourtalent-text__list p {
   display: flex;
   align-items: center;
+  line-height: 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.ourtalent-text__list p img {
+  width: 1rem;
 }
 
 .ourtalent-image {
@@ -399,6 +478,13 @@ body {
 
 .process h1 {
   margin-top: 5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #101010;
+
+  opacity: 0.8;
+  font-size: 1.6rem;
 }
 
 .process h1 span {
@@ -409,10 +495,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 90%;
 }
 
 .process-container__card {
-  width: 21%;
+  width: 28%;
   min-width: 250px;
   margin: 9px;
   padding: 1rem;
@@ -433,12 +520,24 @@ body {
   display: flex;
 }
 
+.process-container__card__heading h3 {
+  display: flex;
+  font-size: 1.6rem;
+  margin-right: 0.5rem;
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.14);
+}
+
 .process-container__card__heading img {
-  width: 1.5rem;
+  width: 2rem;
 }
 
 .process-container__card__text {
   font-size: 11px;
+}
+
+.process-container__card__text p {
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 /* FAQ Section */
@@ -456,11 +555,17 @@ body {
 }
 
 .faq-heading h2 {
-  margin: 3rem 0 0 0;
+  margin: 5rem 0 0 0;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  opacity: 0.8;
+  font-size: 1.6rem;
 }
 
 .faq-heading p {
-  font-size: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .faq-heading h2 span {
@@ -469,10 +574,10 @@ body {
 
 .faq-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-
-  flex-wrap: wrap;
-  margin: 0rem 10rem;
+  align-items: center;
+  width: 100%;
 }
 
 .faq-container__box {
@@ -506,7 +611,7 @@ body {
 
 .faq-container__box__heading h3 {
   color: #404040;
-  font-size: 12px;
+  font-size: 0.9rem;
 }
 
 .faqAns {
@@ -517,10 +622,16 @@ body {
   /* overflow-y: auto; */
 }
 
+.faqAns p {
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  font-weight: 500;
+}
+
 .activeFaq .faqAns {
   display: block;
-  height: auto;
-  transition: 0.5s;
+  /* height: auto; */
+  transition: display 0.5s ease-in-out;
 }
 
 /* Contact Us Section */
@@ -589,25 +700,53 @@ body {
 
 .contactus-container__left {
   width: 50%;
+  min-width: 21rem;
   /* margin: 0 3rem; */
 }
 
+.contactus-heading {
+  font-family: "Roboto", sans-serif;
+}
+
+.contactus-heading h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #0e2b3d;
+  margin-bottom: 0.3rem;
+}
+
+.contactus-heading p {
+  color: #666b6b;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 0;
+}
+
 .contactus-form__input {
-  width: 75%;
+  width: 90%;
   display: flex;
 }
 
 .contactus-form__input input {
-  padding: 8px;
+  width: 50%;
+  padding: 0.8rem;
   border: none;
-  margin: 8px;
+  margin: 0.8rem 0.4rem;
 }
 
 .contactus-form__input textarea {
   width: 100%;
   border: none;
   padding: 5px;
-  margin-bottom: 8px;
+  margin: 0.8rem 0.4rem;
+}
+
+.contactus-form__input input,
+textarea::placeholder {
+  font-family: "Prompt", sans-serif;
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: #6c7591;
 }
 
 .captcha {
@@ -631,7 +770,8 @@ body {
 .contactus-form__input button {
   background-color: var(--secondary);
   color: var(--primary);
-  padding: 12px;
+  padding: 1.1rem;
+  margin: 0.8rem 0.4rem;
   width: 40%;
   min-width: 80px;
   border: none;
@@ -639,6 +779,11 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-size: 0.7rem;
+}
+
+.contactus-form__input button img {
+  width: 0.7rem;
 }
 
 .contactus-container__right {
@@ -654,6 +799,7 @@ body {
 
 .contactus-container__right__title h3 {
   margin: 1rem 2rem 1rem 2rem;
+  cursor: pointer;
 }
 
 .contactus-container__right__title h3::after {
@@ -671,38 +817,42 @@ body {
   transition: width 0.3s;
 }
 
-.contactus-container__right__details {
+.contactus-container__right__Address__details {
   display: flex;
   align-items: center;
   padding-left: 25px;
   margin: 1rem 0rem;
 }
 
-.contactus-container__right__details__icon {
+.contactus-container__right__map {
+  display: none;
+}
+
+.contactus-container__right__Address__details__icon {
   position: relative;
 }
 
-.contactus-container__right__details__icon img:nth-child(1) {
+.contactus-container__right__Address__details__icon img:nth-child(1) {
   width: 15px;
   position: absolute;
   top: 14px;
   left: 11px;
 }
-.contactus-container__right__details__icon img:nth-child(2) {
+.contactus-container__right__Address__details__icon img:nth-child(2) {
   width: 42px;
 }
 
-.contactus-container__right__details__text {
+.contactus-container__right__Address__details__text {
   font-family: "Prompt", sans-serif;
   padding-left: 12px;
 }
 
-.contactus-container__right__details__text p:nth-child(1) {
+.contactus-container__right__Address__details__text p:nth-child(1) {
   color: #0e2b3d;
   font-size: 12px;
   margin: 0;
 }
-.contactus-container__right__details__text p:nth-child(2) {
+.contactus-container__right__Address__details__text p:nth-child(2) {
   color: #0e2b3d;
   font-size: 10px;
   margin: 0;
@@ -713,6 +863,7 @@ body {
 .footer {
   background-color: #001d4c;
   color: var(--primary);
+  position: relative;
 }
 
 .footer-top {
@@ -773,6 +924,16 @@ body {
 
 .footer-bottom img {
   width: 16rem;
+}
+
+.bluemap img {
+  width: 40%;
+  min-width: 27rem;
+  height: 79%;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  z-index: 1;
 }
 
 /* Media Queries */
