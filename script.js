@@ -29,6 +29,25 @@ function showMap() {
 }
 
 
+// For Toggling between Detailed Benefits
+const showBenefitsBtn = document.querySelectorAll('.package-card__button');
+console.log(showBenefitsBtn);
+const detailedBenefits = document.querySelectorAll('.package-card__benefits');
+
+const closeBtn = document.querySelectorAll('.package-card__benefits__close');
+
+for (let i = 0; i < 3; i++) {
+    showBenefitsBtn[i].addEventListener('click', function () {
+        detailedBenefits[i].style.display = 'flex';
+    }
+    )
+    closeBtn[i].addEventListener('click', function () {
+        detailedBenefits[i].style.display = 'none';
+    }
+    )
+}
+
+
 
 
 
