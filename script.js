@@ -31,7 +31,6 @@ function showMap() {
 
 // For Toggling between Detailed Benefits
 const showBenefitsBtn = document.querySelectorAll('.package-card__button');
-console.log(showBenefitsBtn);
 const detailedBenefits = document.querySelectorAll('.package-card__benefits');
 
 const closeBtn = document.querySelectorAll('.package-card__benefits__close');
