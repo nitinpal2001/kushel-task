@@ -28,7 +28,8 @@ body {
 }
 
 .logo img {
-  width: 10rem;
+  width: 5rem;
+  height: 4rem;
 }
 
 .container {
@@ -936,7 +937,7 @@ textarea::placeholder {
 }
 
 .footer-top > img {
-  width: 12rem;
+  width: 5rem;
   margin: 1rem;
 }
 
